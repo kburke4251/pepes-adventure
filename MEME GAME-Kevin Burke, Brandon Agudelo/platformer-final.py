@@ -620,6 +620,7 @@ class Game():
             self.stage = Game.WIN
 
     def show_title_screen(self):
+        screen.fill(BLACK)
         text = font_xl.render(TITLE, 1, WHITE)
         rect = text.get_rect()
         rect.centerx = SCREEN_WIDTH // 2
@@ -633,6 +634,7 @@ class Game():
         screen.blit(text, rect)
         
     def show_cleared_screen(self):
+        screen.fill(BLACK)
         text = font_lg.render("Level cleared", 1, WHITE)
         rect = text.get_rect()
         rect.centerx = SCREEN_WIDTH // 2
@@ -640,6 +642,7 @@ class Game():
         screen.blit(text, rect)
 
     def show_win_screen(self):
+        screen.fill(BLACK)
         text = font_lg.render("You win", 1, WHITE)
         rect = text.get_rect()
         rect.centerx = SCREEN_WIDTH // 2
@@ -647,6 +650,7 @@ class Game():
         screen.blit(text, rect)
 
     def show_lose_screen(self):
+        screen.fill(BLACK)
         text = font_lg.render("You lose", 1, WHITE)
         rect = text.get_rect()
         rect.centerx = SCREEN_WIDTH // 2
