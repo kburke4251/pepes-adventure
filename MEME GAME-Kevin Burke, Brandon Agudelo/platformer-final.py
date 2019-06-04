@@ -191,6 +191,8 @@ class Hero(pygame.sprite.Sprite):
                 self.rect.top = hit.rect.bottom
             self.vy = 0
 
+        
+
     def process_items(self, level):
         hit_list = pygame.sprite.spritecollide(self, level.items, True)
 
@@ -215,6 +217,9 @@ class Hero(pygame.sprite.Sprite):
             self.rect.left = 0
         elif self.rect.right > level.width:
             self.rect.right = level.width
+        elif self.rect.top > 576:
+            self.hearts = 0
+            
 
     def check_goal(self, level):
         self.reached_goal = level.goal.contains(self.rect)
